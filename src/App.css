@@ -1,38 +1,112 @@
 .App {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 40px;
+  position: relative;
+}
+.wrapper {
+  display: flex;
+  gap: 4px;
+}
+.day {
+  height: 14px;
+  width: 14px;
+}
+.week:nth-child(1)::after,
+.week:nth-child(5)::after,
+.week:nth-child(9)::after,
+.week:nth-child(13)::after,
+.week:nth-child(17)::after,
+.week:nth-child(21)::after,
+.week:nth-child(25)::after,
+.week:nth-child(29)::after,
+.week:nth-child(33)::after,
+.week:nth-child(37)::after,
+.week:nth-child(41)::after,
+.week:nth-child(45)::after {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.week:nth-child(1)::after {
+  content: "Jan";
+}
+.week:nth-child(5)::after {
+  content: "Feb";
+}
+.week:nth-child(9)::after {
+  content: "Mar";
+}
+.week:nth-child(13)::after {
+  content: "Apr";
+}
+.week:nth-child(17)::after {
+  content: "May";
+}
+.week:nth-child(21)::after {
+  content: "Jun";
+}
+.week:nth-child(25)::after {
+  content: "Jul";
+}
+.week:nth-child(29)::after {
+  content: "Aug";
+}
+.week:nth-child(33)::after {
+  content: "Sep";
+}
+.week:nth-child(37)::after {
+  content: "Oct";
+}
+.week:nth-child(41)::after {
+  content: "Nov";
+}
+.week:nth-child(45)::after {
+  content: "Dec";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.week {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4px;
+}
+.week:nth-child(1) .day::before {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  font-size: 8px;
+  text-align: right;
+}
+.week:nth-child(1) .day:nth-child(1)::before {
+  content: "Sun";
+}
+.week:nth-child(1) .day:nth-child(2)::before {
+  content: "Mon";
+}
+.week:nth-child(1) .day:nth-child(3)::before {
+  content: "Tue";
+}
+.week:nth-child(1) .day:nth-child(4)::before {
+  content: "Wed";
+}
+.week:nth-child(1) .day:nth-child(5)::before {
+  content: "Thur";
+}
+.week:nth-child(1) .day:nth-child(6)::before {
+  content: "Fir";
+}
+.week:nth-child(1) .day:nth-child(7)::before {
+  content: "Sat";
 }
 
-.App-link {
-  color: #61dafb;
+.success {
+  background: #4BB543;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fail {
+  background:#FC100D;
 }
