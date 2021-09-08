@@ -15,19 +15,24 @@
 .day {
   height: 14px;
   width: 14px;
+  border: 1px solid #1b1f230f; 
 }
+.day:not(.success, .fail) {
+  background-color: #ebedf0;
+} 
+
 .week:nth-child(1)::after,
 .week:nth-child(5)::after,
 .week:nth-child(9)::after,
-.week:nth-child(13)::after,
-.week:nth-child(17)::after,
-.week:nth-child(21)::after,
-.week:nth-child(25)::after,
-.week:nth-child(29)::after,
-.week:nth-child(33)::after,
-.week:nth-child(37)::after,
-.week:nth-child(41)::after,
-.week:nth-child(45)::after {
+.week:nth-child(14)::after,
+.week:nth-child(18)::after,
+.week:nth-child(23)::after,
+.week:nth-child(27)::after,
+.week:nth-child(31)::after,
+.week:nth-child(36)::after,
+.week:nth-child(40)::after,
+.week:nth-child(44)::after,
+.week:nth-child(49)::after {
   display: inline-block;
   margin-top: 6px;
   font-size: 8px;
@@ -42,31 +47,31 @@
 .week:nth-child(9)::after {
   content: "Mar";
 }
-.week:nth-child(13)::after {
+.week:nth-child(14)::after {
   content: "Apr";
 }
-.week:nth-child(17)::after {
+.week:nth-child(18)::after {
   content: "May";
 }
-.week:nth-child(21)::after {
+.week:nth-child(23)::after {
   content: "Jun";
 }
-.week:nth-child(25)::after {
+.week:nth-child(27)::after {
   content: "Jul";
 }
-.week:nth-child(29)::after {
+.week:nth-child(31)::after {
   content: "Aug";
 }
-.week:nth-child(33)::after {
+.week:nth-child(36)::after {
   content: "Sep";
 }
-.week:nth-child(37)::after {
+.week:nth-child(40)::after {
   content: "Oct";
 }
-.week:nth-child(41)::after {
+.week:nth-child(44)::after {
   content: "Nov";
 }
-.week:nth-child(45)::after {
+.week:nth-child(49)::after {
   content: "Dec";
 }
 
